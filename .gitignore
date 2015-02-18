@@ -1,3 +1,13 @@
+
+# the proot executable
+proot*
+# short name for the container
+lxc_evis
+# long name
+ubuntu-14.04-x86_64*
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
