@@ -30,3 +30,5 @@ function evis_root() {
     env -i TERM=xterm DISPLAY=$DISPLAY HOME=/home/evis $DIR_EVIS/proot-x86_64 -w /home/evis -b ~/.Xauthority:/home/evis/.Xauthority -b /etc/hosts -b /proc -b /dev/fuse -b /dev/urandom -b /dev/random -b /etc/resolv.conf -b /dev -r $DIR_LXC_EVIS -0 /bin/bash -l -c $COMMAND
 }
 
+export -f evis_user
+export -f evis_root

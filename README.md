@@ -87,14 +87,12 @@ Small things
 * Get 32-bit proot if necessary.
 * Check the symlink in copy_scripts.
 * Perhaps improve user creation?
-* Remove script/scripts.txt when all info is copied here.
 * Handle the lxc_settings better. Perhaps have a default.
 * Fix hardcoded paths in install scripts.
 * Translate all these instructions to something like salt.
 * And/or put all these instructions in a single file.
 * Put things better in directories.
-* Especially running the demo.
-* Finish orange installation.
+* Especially running awe.
 * Do awe user properly.
 * Fix "Do you want to run" message in java
 * Fix "Your java version is out of date"

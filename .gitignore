@@ -2,7 +2,7 @@
 # the proot executable
 proot*
 # short name for the container
-lxc_evis
+lxc_evis*
 # long name
 ubuntu-14.04-x86_64*
 
