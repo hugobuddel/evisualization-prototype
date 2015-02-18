@@ -1,0 +1,18 @@
+# Hmm shell is not necessary?
+#shell -${SHELL}
+#shell /bin/bash
+#shell -/bin/bash
+#shell -bash
+
+hardstatus on
+#hardstatus alwayslastline
+# From http://pastebin.com/kMkuFXi9
+hardstatus alwayslastline "%{= wk}%-Lw%{= BW}%n%f* %t%{-}%+Lw %-=%{= BW}%H%{-}%{-}"
+
+screen -t topcat 2 /home/evis/scripts/start_topcat_wait.sh
+screen -t orange 3 /home/evis/scripts/start_orange_demo_samp.sh
+screen -t puller 4 /home/evis/scripts/start_simplepuller.sh
+screen -t dependencies 5 /home/evis/scripts/start_dependencyexplorer.sh
+screen -t bash 0 /bin/bash
+screen -t awe 1 /home/evis/scripts/start_awe_demo.sh
+

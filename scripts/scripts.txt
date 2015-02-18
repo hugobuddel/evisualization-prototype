@@ -1,0 +1,33 @@
+These are various scripts in order to build the linux container
+with the prototype end-to-end demo of the eVisualization of 
+big data project.
+
+
+#####
+# Installation
+#
+
+# TODO: finish this
+
+bash get_proot.sh
+bash get_container.sh
+
+# TODO: create the user
+
+bash copy_scripts.sh
+source lxc_settings.sh
+
+evis_root
+/home/evis/scripts/root_aptget_upgrade.sh
+
+evis_root /home/evis/scripts/root_aptget_dependencies.sh
+
+# TODO: fix DPU
+
+
+#####
+# Running demos
+#
+
+# TODO
+
