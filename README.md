@@ -4,25 +4,29 @@ Prototype of the eVisualization project software.
 ## Installation
 
 There are two ways to get a working eVisualization prototype software
-installation. Either follow the instructions in INSTALL.md or
+installation. Either follow the instructions in [INSTALL.md](INSTALL.md) or
 download a preconfigured linux container as described here.
 
-> git clone git@github.com:hugobuddel/evisualization-prototype.git
-> cd evisualization-prototype
-> scripts/get_prototype_preinstalled.sh
+```
+git clone git@github.com:hugobuddel/evisualization-prototype.git
+cd evisualization-prototype
+scripts/get_prototype_preinstalled.sh
+```
 
 ## Running Prototype
 
-> cd evisualization-prototype
-> source scripts/lxc_settings.sh
-> scripts/host_create_user.sh
-> scripts/host_start_demo.sh
+```
+cd evisualization-prototype
+source scripts/lxc_settings.sh
+scripts/host_create_user.sh
+scripts/host_start_demo.sh
+```
 
 Open firefox window to http://localhost:8080/ if this is not opened automatically.
 
 ### Test demo
 
-Placeholder. See DEMOS.md
+Placeholder. See [DEMOS.md](DEMOS.md).
 
 ## TODO
 
