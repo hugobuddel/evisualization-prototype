@@ -3,105 +3,30 @@ Prototype of the eVisualization project software.
 
 ## Installation
 
-### Create the container
+There are two ways to get a working eVisualization prototype software
+installation. Either follow the instructions in INSTALL.md or
+download a preconfigured linux container as described here.
 
-Clone this repository.
 > git clone git@github.com:hugobuddel/evisualization-prototype.git
-
-Get proot. Proot is used to 'run' the container.
-> scripts/get_proot.sh 
-
-Get the base linux container. Ubuntu 14.04 is used.
-> scripts/get_container.sh
-
-Create a user in the container. This is necessary to ensure the userid matches the files.
-> scripts/host_create_user.sh
-
-Copy these scripts to the container.
-> scripts/copy_scripts.sh
-
-Tell the shell where the container can be found and make shell functions.
-> source scripts/lxc_settings.sh
-
-A shell in the container can now be created with
-> evis_user
-or
-> evis_root
-Quit the shell in the usual methods, e.g. with exit.
-
-### Install dependencies through apt-get
-
-First remove unnecessary dependencies.
-> evis_root /home/evis/scripts/root_aptget_remove.sh
-
-Update the repositories and upgrade the existing packages.
-> evis_root /home/evis/scripts/root_aptget_update.sh
-> evis_root /home/evis/scripts/root_aptget_upgrade.sh
-
-Install the necessary dependencies.
-> evis_root /home/evis/scripts/root_aptget_dependencies.sh
-
-### Install software
-
-> evis_user
-
-> /home/evis/scripts/user_install_awe.sh
-
-> /home/evis/scripts/user_awe_bpz.sh
-
-> /home/evis/scripts/user_orange_virtualenv.sh
-
-> /home/evis/scripts/user_orange_dependencies.sh
-
-> /home/evis/scripts/user_orange_astropy.sh
-
-> /home/evis/scripts/user_install_orange.sh
-
-> /home/evis/scripts/user_install_java.sh
-
-> /home/evis/scripts/user_install_firefox.sh 
-
+> cd evisualization-prototype
+> scripts/get_prototype_preinstalled.sh
 
 ## Running Prototype
 
-TODO initialization stuff like
-* create user
+> cd evisualization-prototype
+> source scripts/lxc_settings.sh
+> scripts/host_create_user.sh
+> scripts/host_start_demo.sh
 
-> evis_user
-
-> screen -xR demo
-
-> /home/evis/scripts/start_topcat.sh
-> /home/evis/scripts/start_awe_demo.sh
-> /home/evis/scripts/start_orange_demo_samp.sh
-> /home/evis/scripts/start_simplepuller.sh
-> /home/evis/scripts/start_dependencyexplorer.sh
+Open firefox window to http://localhost:8080/ if this is not opened automatically.
 
 ### Test demo
 
-
+Placeholder. See DEMOS.md
 
 ## TODO
 
-Small things
-* Get 32-bit proot if necessary.
-* Check the symlink in copy_scripts.
-* Perhaps improve user creation?
-* Handle the lxc_settings better. Perhaps have a default.
-* Fix hardcoded paths in install scripts.
-* Translate all these instructions to something like salt.
-* And/or put all these instructions in a single file.
-* Put things better in directories.
-* Especially running awe.
-* Do awe user properly.
-* Fix "Do you want to run" message in java
-* Fix "Your java version is out of date"
-* Let treeexplorer quit when problem arises
-* Fix "groups: cannot find name for group ID 1000" errors
-
-
-Medium things
-* Let treeexplorer not crash because reply = None
-* Do not send reply = None to treeexplorer
+Todos can be found as tasks on Redmine:
+https://redmine.hpc.rug.nl/redmine/projects/evisualization-of-big-data/issues
 
 
