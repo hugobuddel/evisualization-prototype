@@ -3,6 +3,8 @@
 
 rm .samp
 
+chmod 777 /var/run/screen
+
 screen -c /home/evis/scripts/dot_screenrc_demo 
 
 
