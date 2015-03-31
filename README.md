@@ -17,8 +17,6 @@ scripts/get_prototype_preinstalled.sh
 
 ```
 cd evisualization-prototype
-source scripts/lxc_settings.sh
-scripts/host_create_user.sh
 scripts/host_start_demo.sh
 ```
 
