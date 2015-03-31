@@ -18,6 +18,9 @@ source scripts/lxc_settings.sh
 # Update the prototype code.
 evis_user /home/evis/scripts/user_update_aweorange.sh
 
+# Copy the awe user if necessary.
+scripts/host_copy_awe_user.sh
+
 # Update the system packages.
 evis_root /home/evis/scripts/root_aptget_update.sh
 evis_root /home/evis/scripts/root_aptget_upgrade.sh
