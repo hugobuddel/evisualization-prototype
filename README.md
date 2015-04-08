@@ -8,7 +8,7 @@ installation. Either follow the instructions in [INSTALL.md](INSTALL.md) or
 download a preconfigured linux container as described here.
 
 ```
-git clone git@github.com:hugobuddel/evisualization-prototype.git
+git clone https://github.com/hugobuddel/evisualization-prototype.git
 cd evisualization-prototype
 scripts/get_prototype_preinstalled.sh
 ```
