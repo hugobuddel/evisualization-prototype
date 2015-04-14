@@ -35,7 +35,7 @@ source ./scripts/lxc_settings.sh
 In awe
 
 ```
-universe = (SourceCollection.name == "KIDS_129.0_-0.5_double_image_mode_GAAP")[0]
+universe = (SourceCollection.name == "demosmalluniverse")[0]
 samp.broadcast_sourcecollections_in_parts = True
 samp.highlight_sourcecollection(universe)
 ```
