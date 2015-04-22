@@ -1,5 +1,3 @@
-. orange3env/bin/activate
-
 #  Bottlechest
 git clone https://github.com/biolab/bottlechest.git
 pushd bottlechest

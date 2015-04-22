@@ -3,5 +3,4 @@
 #git pull origin develop
 #cd
 
-. orange3env/bin/activate
 python -m Orange.canvas

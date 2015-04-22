@@ -5,6 +5,5 @@
 
 /home/evis/scripts/wait_for_hub.sh 
 
-. orange3env/bin/activate
-python -m Orange.canvas /home/evis/scripts/demo_samp.ows
+python3 -m Orange.canvas /home/evis/scripts/demo_samp.ows
 
