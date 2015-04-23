@@ -22,6 +22,7 @@ scripts/host_start_demo.sh
 
 
 ## Demo 1
+NOTE: Change directory to a working directory as you will be downlodaing some data in parts (so many files) on your local machine.
 
 Corresponds to [Milestone Base on Redmine](https://redmine.hpc.rug.nl/redmine/projects/evisualization-of-big-data/wiki/Milestone_Baseine/versions/6). Or to the top left submilestone of [Milestone Scatterplot](https://redmine.hpc.rug.nl/redmine/projects/evisualization-of-big-data/wiki/Milestone_Scatterplot); about pulling "Existing Attributes" from "Existing Tile".
 
