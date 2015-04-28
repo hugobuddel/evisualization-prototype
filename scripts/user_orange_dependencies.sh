@@ -1,3 +1,6 @@
+# pyqtgraph
+pip install pyqtgraph
+
 #  Bottlechest
 git clone https://github.com/biolab/bottlechest.git
 pushd bottlechest
