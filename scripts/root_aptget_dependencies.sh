@@ -11,4 +11,4 @@ env PATH=$PATH apt-get install cvs libbz2-dev libreadline6-dev zlib1g-dev \
   python-gtk2 xdot libatk-bridge2.0-0 libatk-bridge2.0-dev \
   libatk-adaptor libasound2 libdbus-glib-1-2 debtree -y
 
-env PATH=$PATH apt-get remove python3-numpy -y
+env PATH=$PATH apt-get remove python3 -y

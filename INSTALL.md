@@ -68,9 +68,8 @@ evis_root /home/evis/scripts/root_aptget_dependencies.sh
 evis_user
 /home/evis/scripts/user_install_awe.sh
 /home/evis/scripts/user_awe_bpz.sh
-/home/evis/scripts/user_orange_virtualenv.sh
+/home/evis/scripts/user_install_anaconda.sh
 /home/evis/scripts/user_orange_dependencies.sh
-/home/evis/scripts/user_orange_astropy.sh
 /home/evis/scripts/user_install_orange.sh
 /home/evis/scripts/user_install_java.sh
 /home/evis/scripts/user_install_firefox.sh 

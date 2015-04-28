@@ -2,7 +2,7 @@
 git clone https://github.com/biolab/bottlechest.git
 pushd bottlechest
 make pyx cfiles
-python setup.py install
+python3 setup.py install
 popd
 
 
