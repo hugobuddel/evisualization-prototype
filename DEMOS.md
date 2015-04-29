@@ -57,6 +57,7 @@ First start all the software.
 In awe
 
 ```
+tile_name = 'Copy of 1547341: KIDS_351.7_-33.1_double_image_mode_GAAP'
 q_universe = (SourceCollection.name == tile_name) & (SourceCollection.SCID == 1689741)
 universe = q_universe.max('creation_date')
 
