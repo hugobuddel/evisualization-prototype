@@ -47,3 +47,27 @@ In Orange
 * Choose your favourite attributes.
 * Zoom in on your region of interest.
 * See your data arrive.
+
+
+## Demo 2
+Experimental demo to test the new SourceCollection OnTheFly functionality.
+
+First start all the software.
+
+In awe
+
+```
+q_universe = (SourceCollection.name == tile_name) & (SourceCollection.SCID == 1689741)
+universe = q_universe.max('creation_date')
+
+samp.broadcast_sourcecollections_in_parts = True
+samp.use_onthefly = True
+samp.highlight_sourcecollection(universe)
+```
+
+In Orange
+
+* Open the scatterplot.
+* Choose your favourite attributes.
+* Zoom in on your region of interest.
+* See your data arrive.
