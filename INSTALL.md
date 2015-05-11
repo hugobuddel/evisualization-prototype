@@ -4,10 +4,16 @@
 
 Clone this repository.
 ```
+git clone https://github.com/hugobuddel/evisualization-prototype.git
+```
+or
+```
 git clone git@github.com:hugobuddel/evisualization-prototype.git
 ```
-
-TODO: cd into the directory
+and enter the checkout
+```
+cd evisualization-prototype
+```
 
 Get proot. Proot is used to 'run' the container.
 ```
