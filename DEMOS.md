@@ -52,6 +52,8 @@ In Orange
 ## Demo 2
 Experimental demo to test the new SourceCollection OnTheFly functionality.
 
+The universe in this demo has too many attributes and therefor does not work properly. Try demo 3 for a simpler universe.
+
 First start all the software.
 
 In awe
@@ -60,6 +62,28 @@ In awe
 tile_name = 'Copy of 1547341: KIDS_351.7_-33.1_double_image_mode_GAAP'
 q_universe = (SourceCollection.name == tile_name) & (SourceCollection.SCID == 1689741)
 universe = q_universe.max('creation_date')
+
+samp.broadcast_sourcecollections_in_parts = True
+samp.use_onthefly = True
+samp.highlight_sourcecollection(universe)
+```
+
+In Orange
+
+* Open the scatterplot.
+* Choose your favourite attributes.
+* Zoom in on your region of interest.
+* See your data arrive.
+
+## Demo 3
+Experimental demo to test the new SourceCollection OnTheFly functionality.
+
+This is the same as demo 2, but with less attributes.
+
+
+In awe
+```
+universe = (SourceCollection.SCID == 1719221)[0]
 
 samp.broadcast_sourcecollections_in_parts = True
 samp.use_onthefly = True
