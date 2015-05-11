@@ -20,12 +20,12 @@ Get proot. Proot is used to 'run' the container.
 scripts/get_proot.sh 
 ```
 
-Get the base linux container. Ubuntu 14.04 is used.
+Get the base linux container. Ubuntu 14.04 is used. @tar@ might throw some errors when unpacking the container. These errors are harmless and expected because it unpacks a root filesystem. (Linux containers are often used without unpacking them.)
 ```
 scripts/get_container.sh
 ```
 
-Create a user in the container. This is necessary to ensure the userid matches the files.
+Create a user in the container. This is necessary to ensure the userid matches the files. This does not (yet) create a group, which will cause a warning when entering the container.
 ```
 scripts/host_create_user.sh
 ```
@@ -57,7 +57,7 @@ First remove unnecessary dependencies.
 evis_root /home/evis/scripts/root_aptget_remove.sh
 ```
 
-Update the repositories and upgrade the existing packages.
+Update the repositories and upgrade the existing packages. Running apt-get upgrade might hang. Kill/suspend the process if that happens.
 ```
 evis_root /home/evis/scripts/root_aptget_update.sh
 evis_root /home/evis/scripts/root_aptget_upgrade.sh
@@ -70,14 +70,27 @@ evis_root /home/evis/scripts/root_aptget_dependencies.sh
 
 ### Install software
 
+Enter the container as a user.
 ```
 evis_user
+```
+
+Install the Astro-WISE Environment. This might take a while, up to half an hour.
+```
 /home/evis/scripts/user_install_awe.sh
 /home/evis/scripts/user_awe_bpz.sh
+```
+
+Install Orange 3.
+```
 /home/evis/scripts/user_orange_virtualenv.sh
 /home/evis/scripts/user_orange_dependencies.sh
 /home/evis/scripts/user_orange_astropy.sh
 /home/evis/scripts/user_install_orange.sh
+```
+
+Install other applications. Install firefox by hand if it fails.
+```
 /home/evis/scripts/user_install_java.sh
 /home/evis/scripts/user_install_firefox.sh 
 ```
