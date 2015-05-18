@@ -9,5 +9,5 @@ if [ -e xdot.py ] ; then mv xdot.py xdot_awe.py ; fi
 # Disable prepackaged dot_static
 sed -i "s/.\/dot_static/dot/g" treeexplorer.py
 
-python treeexplorer.py
+python2 treeexplorer.py
 

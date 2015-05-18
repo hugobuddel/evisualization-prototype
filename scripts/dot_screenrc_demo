@@ -1,7 +1,7 @@
-# Hmm shell is not necessary?
+# dash will be started if we don't set SHELL here.
 #shell -${SHELL}
 #shell /bin/bash
-#shell -/bin/bash
+shell -/bin/bash
 #shell -bash
 
 hardstatus on
