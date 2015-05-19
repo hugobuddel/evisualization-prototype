@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme description="" title="Incremental Learner Demo" version="2.0">
+	<nodes>
+		<node id="0" name="Data Table" position="(530.0, 135.0)" project_name="Orange" qualified_name="Orange.widgets.data.owtable.OWDataTable" title="Data Table" version="" />
+		<node id="1" name="Stochastic Gradient Descent" position="(600.0, 232.0)" project_name="Orange" qualified_name="Orange.widgets.classify.owsgd.OWSGD" title="Stochastic Gradient Descent" version="" />
+		<node id="2" name="Test Learners" position="(742.0, 378.0)" project_name="Orange" qualified_name="Orange.widgets.evaluate.owtestlearners.OWTestLearners" title="Test Learners" version="" />
+		<node id="3" name="InfiniTable" position="(151.0, 232.0)" project_name="Orange" qualified_name="Orange.widgets.data.infinitable.OWInfiniTable" title="InfiniTable" version="" />
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="Learner" sink_node_id="2" source_channel="Learner" source_node_id="1" />
+		<link enabled="true" id="1" sink_channel="Data" sink_node_id="0" source_channel="Data" source_node_id="3" />
+		<link enabled="true" id="2" sink_channel="Data" sink_node_id="2" source_channel="Data" source_node_id="3" />
+		<link enabled="true" id="3" sink_channel="Data" sink_node_id="1" source_channel="Data" source_node_id="3" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties format="pickle" node_id="0">gAN9cQAoWBUAAABzZWxlY3RlZF9zY2hlbWFfaW5kZXhxAUsAWBMAAABzYXZlZFdpZGdldEdlb21l
+dHJ5cQJjc2lwCl91bnBpY2tsZV90eXBlCnEDWAwAAABQeVF0NC5RdENvcmVxBFgKAAAAUUJ5dGVB
+cnJheXEFQy4B2dDLAAEAAAAACAUAAAIjAAALUQAABD0AAAgHAAACOgAAC08AAAQ5AAAAAQAAcQaF
+cQeHcQhScQlYDgAAAGRpc3RfY29sb3JfUkdCcQooS9xL3EvcS/90cQtYFQAAAHNob3dfYXR0cmli
+dXRlX2xhYmVsc3EMiFgOAAAAY29sb3JfYnlfY2xhc3NxDYhYEgAAAHNob3dfZGlzdHJpYnV0aW9u
+c3EOiFgLAAAAc2VsZWN0X3Jvd3NxD4hYCwAAAGF1dG9fY29tbWl0cRCJWA4AAABjb2xvcl9zZXR0
+aW5nc3ERTnUu
+</properties>
+		<properties format="pickle" node_id="1">gAN9cQAoWAwAAABsZWFybmVyX25hbWVxAVgDAAAAU0dEcQJYFwAAAG5vX29mX2luc3RhbmNlc190
+b19wdWxscQNLZFgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXEEY3NpcApfdW5waWNrbGVfdHlwZQpx
+BVgMAAAAUHlRdDQuUXRDb3JlcQZYCgAAAFFCeXRlQXJyYXlxB0MuAdnQywABAAAAAAjhAAACEwAA
+CdAAAAKfAAAI4wAAAioAAAnOAAACmwAAAAEAAHEIhXEJh3EKUnELdS4=
+</properties>
+		<properties format="pickle" node_id="2">gAN9cQAoWAoAAAByZXNhbXBsaW5ncQFLAVgIAAAAbl9yZXBlYXRxAksKWBAAAABjb250ZXh0X3Nl
+dHRpbmdzcQNdcQRjT3JhbmdlLndpZGdldHMuc2V0dGluZ3MKQ29udGV4dApxBSmBcQZ9cQcoWAYA
+AAB2YWx1ZXNxCH1xCShoAUsBaAJLClgPAAAAY2xhc3Nfc2VsZWN0aW9ucQpYBgAAAChOb25lKXEL
+WAgAAABzYW1wbGVfcHEMS0VYBwAAAGtfZm9sZHNxDUsKWBMAAABzYXZlZFdpZGdldEdlb21ldHJ5
+cQ5jc2lwCl91bnBpY2tsZV90eXBlCnEPWAwAAABQeVF0NC5RdENvcmVxEFgKAAAAUUJ5dGVBcnJh
+eXERQy4B2dDLAAEAAAAAC90AAALyAAANyAAABE4AAAvfAAADCQAADcYAAARKAAAAAQAAcRKFcROH
+cRRScRV1WAQAAAB0aW1lcRZHQdVWy01tbBVYBwAAAGNsYXNzZXNxF11xGChYBQAAAGFscGhhcRlY
+BAAAAGJldGFxGmV1YmFoClgGAAAAKE5vbmUpcRtoDEtFaA1LCmgOaA9oEFgKAAAAUUJ5dGVBcnJh
+eXEcQy4B2dDLAAEAAAAAC90AAALyAAANyAAABE4AAAvfAAADCQAADcYAAARKAAAAAQAAcR2FcR6H
+cR9ScSB1Lg==
+</properties>
+		<properties format="literal" node_id="3">{'savedWidgetGeometry': None}</properties>
+	</node_properties>
+</scheme>
