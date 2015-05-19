@@ -4,7 +4,7 @@
 #export AWEPIPE=/home/evis/awehome/current
 
 cd $AWEPIPE/astro/services/qdvsamp/simplepuller/
-python simplepuller.py
+python2 simplepuller.py
 
 # Browse to http://localhost:8080 to use it
 
