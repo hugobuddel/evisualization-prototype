@@ -107,7 +107,7 @@ q_universe = (SourceCollection.name == 'testevisclassificationdemo1')
 universe = q_universe.max('creation_date')
 
 samp.broadcast_sourcecollections_in_parts = True
-samp.use_onthefly = True
+samp.use_onthefly = False
 samp.highlight_sourcecollection(universe)
 ```
 
