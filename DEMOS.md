@@ -97,9 +97,20 @@ In Orange
 * Zoom in on your region of interest.
 * See your data arrive.
 
-
 ## Demo 4
-Experimental demo to test the use of classification in Orange with data from Astro-WISE.
+Demonstrate the incremental learner on the Infinitable.
+
+Note: This demo works best if you disable pulling in the background by commenting out the following code in LazyTable:
+
+    if not self.stop_pulling:
+      self.pull_in_the_background()
+      
+This is because the incremental learner widget instead pulls it's data via the iterator interface. If you do not comment out the above code then the incremental learner will still work, but it will get reset every five seconds or so when the above code gets triggered. This is because it is designed to be reset when new data is first connected (which make sense?) and the code above ends up calling the same callback function (which should be fixed).
+
+After making the change above and re-running Orange, you can open '/home/evis/scripts/demo_inc_learner.ows'. then open the 'Stochastic Gradient Descent' widget and check the 'Pull data' checkbox. This will causes data to be pulled in via the iterator every second (though as noted above, it will get reset every five seconds if you don't comment out the previous code).
+
+## Demo 5
+Experimental demo to test the use of classification in Orange with data from Astro-WISE. Note that this demo does not currently work in practice!
 
 In awe
 ```
