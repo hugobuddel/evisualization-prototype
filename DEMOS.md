@@ -109,6 +109,10 @@ This is because the incremental learner widget instead pulls it's data via the i
 
 After making the change above and re-running Orange, you can open '/home/evis/scripts/demo_inc_learner.ows'. then open the 'Stochastic Gradient Descent' widget and check the 'Pull data' checkbox. This will causes data to be pulled in via the iterator every second (though as noted above, it will get reset every five seconds if you don't comment out the previous code).
 
+You can specify a region of interest by clicking and dragging on the plot. This will draw a green rectangle when you release the mouse button. Incoming instances are then constrained to this range, *but actually this feature appears to be broken in the prototype* as it prevents *any* further instances from arriving. It does work in the 'incremental-learner' branch but of course this involves building a new version of Orange, etc. Unfortunatly I am writing this on my last day on the project so won't have time to investigate this further.
+
+The 'Use dynamic bounds' option just adjusts the size of the axes to match the contents.
+
 ## Demo 5
 Experimental demo to test the use of classification in Orange with data from Astro-WISE. Note that this demo does not currently work in practice!
 
