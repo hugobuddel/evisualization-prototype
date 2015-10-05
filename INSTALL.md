@@ -83,9 +83,8 @@ Install the Astro-WISE Environment. This might take a while, up to half an hour.
 
 Install Orange 3.
 ```
-/home/evis/scripts/user_orange_virtualenv.sh
+/home/evis/scripts/user_install_anaconda.sh
 /home/evis/scripts/user_orange_dependencies.sh
-/home/evis/scripts/user_orange_astropy.sh
 /home/evis/scripts/user_install_orange.sh
 ```
 

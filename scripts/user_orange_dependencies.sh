@@ -1,10 +1,15 @@
-. orange3env/bin/activate
+# pyqtgraph
+pip install pyqtgraph
+
+conda install sqlparse
+conda update scikit-learn
+conda install numpydoc
 
 #  Bottlechest
 git clone https://github.com/biolab/bottlechest.git
 pushd bottlechest
 make pyx cfiles
-python setup.py install
+python3 setup.py install
 popd
 
 
