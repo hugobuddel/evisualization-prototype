@@ -95,16 +95,17 @@ evis_root
 ```
 depending on whether root is required. Quit the shell in the usual methods, e.g. with exit.
 
+Remove unnecessary dependencies that cause difficulties when running the software as a container. Run as root (through @evis_root@ at the host):
+```
+/home/evis/scripts/root_aptget_remove.sh
+```
+
 
 # Install Software
 
 ## Install dependencies through apt-get
 
 Run the following commands as root (through @evis_root@ from the host for an LXC, or through @sudo@ from the guest for a VM).
-First remove unnecessary dependencies.
-```
-/home/evis/scripts/root_aptget_remove.sh
-```
 
 Update the repositories and upgrade the existing packages. Running apt-get upgrade might hang. Kill/suspend the process if that happens.
 ```
