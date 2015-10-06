@@ -7,11 +7,10 @@ Therefore, the steps are as follows:
 1. Setup your system by either
   - Creating a Virtual Machine
   - Creating a Linux Container
-2. Installing all the software
-  1. Install Dependencies
-  2. Install Astro-WISE
-  3. Install Orange3
-  4. Install auxiliary programs
+2. Install Dependencies
+3. Installing all the software
+  1. Install Astro-WISE
+  2. Install Orange3
 
 # Setup Machine
 
@@ -27,12 +26,16 @@ Create a machine with
 - for VirtualBox, turn on 3D accelaration (Display -> Video -> Enable 3D Acceleration),
 - for VirtualBox, if desired, turn on a 'Host-only' network adapter to SSH to the machine
 
+### Upgrade
+
 Upgrade and install git (and ssh if desired):
 ```
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install git ssh
 ```
+
+### Download the prototype scripts.
 
 Optionally install your own github credentials. Retrieve the evisualization prototype repository.
 ```
@@ -41,7 +44,30 @@ git clone https://github.com/hugobuddel/evisualization-prototype.git
 ln -s evisualization-prototype/scripts scripts
 ```
 
+
+### Install dependencies through apt-get
+
+Run the following commands as root through sudo.
+
+Update the repositories and upgrade the existing packages.
+```
+sudo /home/evis/scripts/root_aptget_update.sh
+sudo /home/evis/scripts/root_aptget_upgrade.sh
+```
+
+Install the necessary dependencies.
+```
+sudo /home/evis/scripts/root_aptget_dependencies.sh
+```
+
+Install auxiliary software. A local version of java is installed because of compatibility with the Linux Container.
+```
+/home/evis/scripts/user_install_java.sh
+```
+
+### Install Software
 Run 'user' commands below as the local @evis@ user, run 'root' commands through @sudo@.
+
 
 ## Setup Linux Container
 
@@ -100,9 +126,6 @@ Remove unnecessary dependencies that cause difficulties when running the softwar
 /home/evis/scripts/root_aptget_remove.sh
 ```
 
-
-# Install Software
-
 ## Install dependencies through apt-get
 
 Run the following commands as root (through @evis_root@ from the host for an LXC, or through @sudo@ from the guest for a VM).
@@ -117,6 +140,17 @@ Install the necessary dependencies.
 ```
 /home/evis/scripts/root_aptget_dependencies.sh
 ```
+
+
+Install other applications. Java and Firefox cannot be apt-getted for a Linux Container. Install firefox by hand if it fails.
+```
+/home/evis/scripts/user_install_java.sh
+/home/evis/scripts/user_install_firefox.sh 
+```
+
+
+# Install Software
+
 
 ## Install software
 
@@ -135,8 +169,3 @@ Install Orange 3.
 /home/evis/scripts/user_install_orange.sh
 ```
 
-Install other applications. Install firefox by hand if it fails.
-```
-/home/evis/scripts/user_install_java.sh
-/home/evis/scripts/user_install_firefox.sh 
-```
