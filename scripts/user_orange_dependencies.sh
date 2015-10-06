@@ -1,9 +1,9 @@
 # pyqtgraph
 pip install pyqtgraph
 
-conda install sqlparse
-conda update scikit-learn
-conda install numpydoc
+conda install sqlparse -y
+conda update scikit-learn -y
+conda install numpydoc -y
 
 #  Bottlechest
 git clone https://github.com/biolab/bottlechest.git
