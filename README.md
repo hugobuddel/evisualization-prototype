@@ -7,6 +7,8 @@ There are two ways to get a working eVisualization prototype software
 installation. Either follow the instructions in [INSTALL.md](INSTALL.md) or
 download a preconfigured linux container as described here.
 
+WARNING: THIS CONTAINER IS OUT OF DATE!
+
 ```
 git clone https://github.com/hugobuddel/evisualization-prototype.git
 cd evisualization-prototype
