@@ -5,6 +5,12 @@ conda install sqlparse -y
 conda update scikit-learn -y
 conda install numpydoc -y
 
+pip install recommonmark
+conda install beautifulsoup4 -y
+conda install openpyxl -y
+
+#pip install sphinx --upgrade
+
 #  Bottlechest
 git clone https://github.com/biolab/bottlechest.git
 pushd bottlechest
