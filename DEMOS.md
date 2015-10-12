@@ -130,3 +130,16 @@ In Orange
 
 * Do the classification.
 
+## Demo 6 Infinitable
+Demo using the Infinitable. (Unde development.)
+
+* Start Orange.
+* Create an `InfiniTable` widget connecting to a `Data Table` and `Scatter Plot` widget.
+* In the `Data Table` widget:
+ * See many (1000000) rows in info box. (Currently broken.)
+ * Browse around, can browse to all rows quickly. (Currently slow.)
+
+
+
+
+
