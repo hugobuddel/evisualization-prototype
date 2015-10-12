@@ -9,6 +9,9 @@ pip install recommonmark
 conda install beautifulsoup4 -y
 conda install openpyxl -y
 
+# For timing
+pip install gprof2dot
+
 #pip install sphinx --upgrade
 
 #  Bottlechest
