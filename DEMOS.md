@@ -136,8 +136,20 @@ Demo using the Infinitable. (Unde development.)
 * Start Orange.
 * Create an `InfiniTable` widget connecting to a `Data Table` and `Scatter Plot` widget.
 * In the `Data Table` widget:
- * See many (1000000) rows in info box. (Currently broken.)
- * Browse around, can browse to all rows quickly. (Currently slow.)
+ * See many (1000000) rows in info box.
+ * Browse around, can browse to all rows quickly.
+
+## Demo 7 SAMP pushing
+* Start Orange.
+* Create an `SAMP` widget connecting to a `Data Table` and `Scatter Plot` widget.
+* Start the aweprompt.
+
+In awe:
+```
+samp = Samp()
+sc = (SourceCollection.SCID == 100511)[0]
+samp.broadcast(sc)
+```
 
 
 
