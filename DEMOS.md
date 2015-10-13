@@ -151,7 +151,26 @@ sc = (SourceCollection.SCID == 100511)[0]
 samp.broadcast(sc)
 ```
 
+## Demo 7 SAMP pulling
+* Start Orange.
+* Create an `SAMP` widget connecting to a `Data Table` and `Scatter Plot` widget.
+* Start the aweprompt.
 
+In awe:
+```
+samp = Samp()
+context.set_project("KIDS")
+samp.broadcast_sourcecollections_in_parts = True
+samp.use_onthefly = False
+
+# Small dataset, ~5000 objects, ~15 attributes.
+universe3b = (SourceCollection.SCID == 1850841)[0]
+samp.highlight_sourcecollection(universe3b)
+
+# Intermediate dataset, ~100000 objects, ~15 attributes.
+universe2b = (SourceCollection.SCID == 1850951)[0]
+samp.highlight_sourcecollection(universe2b)
+```
 
 
 
