@@ -16,7 +16,7 @@
 
 env PATH=$PATH apt-get install cvs libbz2-dev libreadline6-dev zlib1g-dev \
   vim \
-  gitk \
+  gitk pylint \
   libfreetype6-dev libpng12-dev libaio-dev libaio1 python-fftw \
   libssl-dev python-openssl \
   python-pysqlite2 python-sqlite libsqlite3-dev python-tk \
