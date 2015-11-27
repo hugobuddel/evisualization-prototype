@@ -27,3 +27,5 @@ env PATH=$PATH apt-get install cvs libbz2-dev libreadline6-dev zlib1g-dev \
   python-pip cython libxtst6 ssh-askpass sgt-puzzles \
   python-gtk2 xdot libatk-bridge2.0-0 libatk-bridge2.0-dev \
   libatk-adaptor libasound2 libdbus-glib-1-2 debtree -y
+
+# imagemagick
