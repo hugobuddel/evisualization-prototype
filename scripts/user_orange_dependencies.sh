@@ -9,6 +9,9 @@ pip install recommonmark
 conda install beautifulsoup4 -y
 conda install openpyxl -y
 
+# Upgrades conda as well, necessary for docs
+conda upgrade sphinx -y
+
 # For timing
 pip install gprof2dot
 
