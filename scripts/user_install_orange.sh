@@ -11,3 +11,8 @@ git checkout upstream/master
 python3 setup.py develop
 #git checkout develop
 popd
+
+# Create the large test dataset for the LazyFile widget.
+pushd orange3/Orange/datasets
+python ../data/fixed_from_tab.py glasslarge
+popd
