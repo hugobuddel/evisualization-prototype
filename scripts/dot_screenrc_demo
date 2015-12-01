@@ -9,10 +9,13 @@ hardstatus on
 # From http://pastebin.com/kMkuFXi9
 hardstatus alwayslastline "%{= wk}%-Lw%{= BW}%n%f* %t%{-}%+Lw %-=%{= BW}%H%{-}%{-}"
 
-screen -t topcat 2 /home/evis/scripts/start_topcat_wait.sh
+#screen -t topcat 2 /home/evis/scripts/start_topcat_wait.sh
+screen -t samphub 2 /home/evis/scripts/start_astropyhub.sh
 screen -t orange 3 /home/evis/scripts/start_orange_demo_samp.sh
-screen -t puller 4 /home/evis/scripts/start_simplepuller.sh
-screen -t dependencies 5 /home/evis/scripts/start_dependencyexplorer.sh
+#screen -t puller 4 /home/evis/scripts/start_simplepuller.sh
+#screen -t dependencies 5 /home/evis/scripts/start_dependencyexplorer.sh
 screen -t bash 0 /bin/bash
 screen -t awe 1 /home/evis/scripts/start_awe_demo.sh
 
+# Topcat, the simplepuller and the dependency explorer can be included
+# for more extensive demo's.
