@@ -22,7 +22,7 @@ These instructions assume VirtualBox. However, they should work for a 'real' mac
 
 Create a machine with
 - at least 10 GB space,
-- username 'evis' (@/home/evis@ is still occasionally hardcoded)
+- username 'evis' (`/home/evis` is still occasionally hardcoded)
 - for VirtualBox, turn on 3D accelaration (Display -> Video -> Enable 3D Acceleration),
 - for VirtualBox, if desired, turn on a 'Host-only' network adapter to SSH to the machine
 
@@ -51,7 +51,6 @@ Run the following commands as root through sudo.
 
 Update the repositories and upgrade the existing packages.
 ```
-sudo /home/evis/scripts/root_aptget_update.sh
 sudo /home/evis/scripts/root_aptget_upgrade.sh
 ```
 
@@ -59,15 +58,6 @@ Install the necessary dependencies.
 ```
 sudo /home/evis/scripts/root_aptget_dependencies.sh
 ```
-
-Install auxiliary software. A local version of java is installed because of compatibility with the Linux Container.
-```
-/home/evis/scripts/user_install_java.sh
-```
-
-### Install Software
-Run 'user' commands below as the local @evis@ user, run 'root' commands through @sudo@.
-
 
 ## Setup Linux Container
 
@@ -77,38 +67,30 @@ Clone this repository.
 ```
 git clone https://github.com/hugobuddel/evisualization-prototype.git
 ```
-or
-```
-git clone git@github.com:hugobuddel/evisualization-prototype.git
-```
-and enter the checkout
-```
-cd evisualization-prototype
-```
 
 Get proot. Proot is used to 'run' the container.
 ```
-scripts/get_proot.sh 
+evisualization-prototype/scripts/get_proot.sh 
 ```
 
-Get the base linux container. Ubuntu 14.04 is used. @tar@ might throw some errors when unpacking the container. These errors are harmless and expected because it unpacks a root filesystem. (Linux containers are often used without unpacking them.)
+Get the base linux container. Ubuntu 14.04 is used. `tar` might throw some errors when unpacking the container. These errors are harmless and expected because it unpacks a root filesystem. (Linux containers are often used without unpacking them.)
 ```
-scripts/get_container.sh
+evisualization-prototype/scripts/get_container.sh
 ```
 
 Create a user in the container. This is necessary to ensure the userid matches the files. This does not (yet) create a group, which will cause a warning when entering the container.
 ```
-scripts/host_create_user.sh
+evisualization-prototype/scripts/host_create_user.sh
 ```
 
 Copy these scripts to the container.
 ```
-scripts/copy_scripts.sh
+evisualization-prototype/scripts/copy_scripts.sh
 ```
 
 Tell the shell where the container can be found and make shell functions.
 ```
-source scripts/lxc_settings.sh
+source evisualization-prototype/scripts/lxc_settings.sh
 ```
 
 A shell in the container can be started from the host with either
@@ -121,18 +103,15 @@ evis_root
 ```
 depending on whether root is required. Quit the shell in the usual methods, e.g. with exit.
 
-Remove unnecessary dependencies that cause difficulties when running the software as a container. Run as root (through @evis_root@ at the host):
+### Install dependencies through apt-get
+
+Remove unnecessary dependencies that cause difficulties when running the software as a container. Run as root (through `evis_root` at the host):
 ```
 /home/evis/scripts/root_aptget_remove.sh
 ```
 
-## Install dependencies through apt-get
-
-Run the following commands as root (through @evis_root@ from the host for an LXC, or through @sudo@ from the guest for a VM).
-
 Update the repositories and upgrade the existing packages. Running apt-get upgrade might hang. Kill/suspend the process if that happens.
 ```
-/home/evis/scripts/root_aptget_update.sh
 /home/evis/scripts/root_aptget_upgrade.sh
 ```
 
@@ -141,31 +120,46 @@ Install the necessary dependencies.
 /home/evis/scripts/root_aptget_dependencies.sh
 ```
 
-
-Install other applications. Java and Firefox cannot be apt-getted for a Linux Container. Install firefox by hand if it fails.
-```
-/home/evis/scripts/user_install_java.sh
-/home/evis/scripts/user_install_firefox.sh 
-```
-
-
 # Install Software
 
+Run the rest of the commands as the normal 'evis' user (that is, through `evis_user` from the host for an LXC).
 
-## Install software
-
-Run the rest of the commands as a normal user (that is, through @evis_user@ from the host for an LXC).
+## Install Astro-WISE
 
 Install the Astro-WISE Environment. This might take a while, up to half an hour.
 ```
 /home/evis/scripts/user_install_awe.sh
-/home/evis/scripts/user_awe_bpz.sh
 ```
+Paths are placed in your .bashrc, so source it or start a new session.
+```
+source ~/.bashrc
+```
+
+## Install Orange 3.
 
 Install Orange 3.
 ```
 /home/evis/scripts/user_install_anaconda.sh
+source ~/.bashrc
 /home/evis/scripts/user_orange_dependencies.sh
 /home/evis/scripts/user_install_orange.sh
 ```
 
+## Install optional software
+
+Some software is only necessary for advanced or experimental functionality of the prototype.
+
+A local version of java is installed because of compatibility with the Linux Container.
+```
+/home/evis/scripts/user_install_java.sh
+```
+
+Firefox cannot be apt-getted for a Linux Container. Install firefox by hand if it fails.
+```
+/home/evis/scripts/user_install_firefox.sh 
+```
+
+Install specific photometric redshift code for Astro-WISE.
+```
+/home/evis/scripts/user_awe_bpz.sh
+```

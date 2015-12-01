@@ -11,18 +11,14 @@ WARNING: THIS CONTAINER IS OUT OF DATE!
 
 ```
 git clone https://github.com/hugobuddel/evisualization-prototype.git
-cd evisualization-prototype
-scripts/get_prototype_preinstalled.sh
+evisualization-prototype/scripts/get_prototype_preinstalled.sh
 ```
 
 ## Running Prototype
 
 ```
-cd evisualization-prototype
-scripts/host_start_demo.sh
+evisualization-prototype/scripts/host_start_demo.sh
 ```
-
-Open firefox window to http://localhost:8080/ if this is not opened automatically.
 
 ### Test demo
 
@@ -30,7 +26,9 @@ Placeholder. See [DEMOS.md](DEMOS.md).
 
 ## TODO
 
-Todos can be found as tasks on Redmine:
+Some todos can be found on this github, some on the Orange3 fork and some as tasks on Redmine:
+https://github.com/hugobuddel/evisualization-prototype/issues
+https://github.com/hugobuddel/orange3/issues
 https://redmine.hpc.rug.nl/redmine/projects/evisualization-of-big-data/issues
 
 
