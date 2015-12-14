@@ -14,18 +14,22 @@
 # Cannot remove Python3 on an Ubuntu 14.04.03 VM.
 #env PATH=$PATH apt-get remove python3 -y
 
-env PATH=$PATH apt-get install cvs libbz2-dev libreadline6-dev zlib1g-dev \
+env PATH=$PATH apt-get install \
+  cvs libbz2-dev libreadline6-dev zlib1g-dev \
+  libaio-dev libaio1 \
   vim \
-  gitk pylint \
-  libfreetype6-dev libpng12-dev libaio-dev libaio1 python-fftw \
+  libfreetype6-dev libpng12-dev \
   libssl-dev python-openssl \
   python-pysqlite2 python-sqlite libsqlite3-dev python-tk \
   git python-virtualenv \
   python-qt4-dev libqt4-dev \
   libcfitsio3 \
-  liberfa1 libwcs4 python-virtualenv virtualenvwrapper \
-  python-pip cython libxtst6 ssh-askpass sgt-puzzles \
-  python-gtk2 xdot libatk-bridge2.0-0 libatk-bridge2.0-dev \
-  libatk-adaptor libasound2 libdbus-glib-1-2 debtree -y
+  liberfa1 libwcs4 \
+  cython libxtst6 ssh-askpass \
+  python-gtk2 xdot \
+  screen \
+  -y
 
 # imagemagick
+
+env PATH=$PATH apt-get clean
