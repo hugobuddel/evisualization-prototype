@@ -1,34 +1,13 @@
-# pyqtgraph
+conda update conda
+
+conda install numpy scipy astropy sqlparse scikit-learn numpydoc \
+    pip beautifulsoup4 openpyxl sphinx setuptools wheel nose \
+    jinja2 numpydoc pyqt matplotlib -y
+
 pip install pyqtgraph
 
-conda install sqlparse -y
-conda update scikit-learn -y
-conda install numpydoc -y
+pip install "bottlechest>=0.7.0"
 
-pip install recommonmark
-conda install beautifulsoup4 -y
-conda install openpyxl -y
+pip install "recommonmark>=0.1.1"
 
-# Upgrades conda as well, necessary for docs
-conda upgrade sphinx -y
-
-# For timing
-pip install gprof2dot
-
-#pip install sphinx --upgrade
-
-#  Bottlechest
-git clone https://github.com/biolab/bottlechest.git
-pushd bottlechest
-make pyx cfiles
-python3 setup.py install
-popd
-
-
-# qt-graph-helpers
-git clone https://github.com/biolab/qt-graph-helpers.git
-pushd qt-graph-helpers
-python3 setup.py build
-python3 setup.py install
-popd
-
+conda clean --tarballs --yes
