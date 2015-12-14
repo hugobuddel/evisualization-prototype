@@ -42,3 +42,5 @@ dpu_name : ""
 
 echo '/1 :pserver:anoncvs@cvs.astro-wise.org:2401/cvsroot AyZ, 03?>d' >> /home/evis/.cvspass
 
+# Remove the build directory for compactness
+rm -rf "/home/evis/awehome/${TARGETPLATFORM}/build"
