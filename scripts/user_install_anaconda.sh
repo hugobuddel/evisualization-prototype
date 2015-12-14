@@ -11,3 +11,5 @@ bash miniconda.sh -b -p /home/evis/miniconda
 # Soure ~/.bashrc to get this path also during installation.
 export PATH=/home/evis/anaconda3/bin:${PATH}
 echo "export PATH=/home/evis/miniconda/bin:\${PATH}" >> ~/.bashrc
+
+rm miniconda.sh
